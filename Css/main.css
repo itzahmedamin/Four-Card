@@ -10,4 +10,140 @@
 
 body {
     font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.parent {
+    display: flex;
+    flex-direction: column;
+}
+.parent .parent-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+.parent .parent-container .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+.parent .parent-container .text h1:first-of-type {
+    font-weight: 200;
+    opacity: .9;
+    margin-bottom: 0;
+    color: var(--Very-Dark-Blue);
+    font-size: 2.5rem;
+}
+.parent .parent-container .text h1:last-of-type {
+    margin: 0;
+    color: var(--Very-Dark-Blue);
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+.parent .parent-container .text p {
+    width: 550px;
+    text-align: center;
+    color: var(--Very-Dark-Blue);
+    opacity: .5;
+}
+.parent .parent-container > .cards {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    gap: 30px;
+}
+.parent .parent-container .cards > div:not(div:nth-child(2)) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    gap: 40px;
+    width: 100%;
+    margin: 0;
+    box-shadow: 0px 3px 5px 2px #cad9f7;
+    border-radius: .3rem;
+    padding: 2rem;
+}
+.parent .parent-container .cards > div:first-of-type {
+    border-top: 5px solid var(--Cyan);
+}
+.parent .parent-container .cards > div:last-of-type {
+    border-top: 5px solid var(--Blue);
+}
+.parent .parent-container .cards > div .text2 h3 {
+    margin: 0;
+    color: var(--Very-Dark-Blue);
+}
+.parent .parent-container .cards > div .text2 p {
+    margin-top: 10px;
+    width: 350px;
+    color: var(--Grayish-Blue);
+}
+.parent .parent-container .cards > div .image {
+    display: flex;
+    align-self: flex-end;
+    width: 64px;
+    height: 64px;
+} 
+.parent .parent-container .cards > div .image img {
+    width: 100%;
+} 
+.parent .parent-container .cards .column {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.parent .parent-container .cards .column > div {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    box-shadow: 0px 3px 5px 2px #cad9f7;
+    border-radius: .3rem;
+    padding: 2rem;
+}
+.parent .parent-container .cards .column > div:first-of-type {
+    border-top: 5px solid var(--Red);
+}
+.parent .parent-container .cards .column > div:last-of-type {
+    border-top: 5px solid var(--Orange);
+}
+@media (max-width: 1200px) {
+    body {
+        padding: 3rem;
+        flex-direction: column;
+    }
+    .parent .parent-container .text h1:first-of-type {
+        font-size: 25px;
+    }
+    .parent .parent-container .text h1:last-of-type {
+        font-size: 25px;
+    }
+    .parent .parent-container .text p {
+        width: 312px;
+    }
+    .parent .parent-container>.cards {
+        width: 100%;
+        flex-direction: column;
+    }
+    .parent .parent-container .cards>div:not(div:nth-child(2)) {
+        width: 75%;
+    }
+    .parent .parent-container .cards .column {
+        width: 100%;
+    }
+    .parent .parent-container .cards .column>div {
+        width: 75%;
+        justify-content: center;
+        align-self: center;
+    }
+    .parent .parent-container .cards>div .text2 p {
+        width: 310px;
+    }
 }
